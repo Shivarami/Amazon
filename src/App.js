@@ -11,7 +11,7 @@ function App() {
   const [{},dispatch] = useStateValue();
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
-      console.log("The user is--->",authUser);
+      // console.log("The user is--->",authUser);
 
       if(authUser) {
         dispatch({
