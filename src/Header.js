@@ -13,7 +13,7 @@ function Header() {
     }
   }
   return (
-    <div class="header">
+    <div className="header">
       <Link to="/">
         <img className="header_logo" src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' />
       </Link>
@@ -27,7 +27,7 @@ function Header() {
         <Link to={!user && '/login'}>
           <div onClick={handleAuthentication}className='header__option'>
             <span className='header_optionLineOne'>
-              Hello Guest
+              Hello {!user ? "Guest" : user.email}
             </span>
             <span className='header_optionLineTwo'>
               {user ? 'Sign Out':'Sign In' }
