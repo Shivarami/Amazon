@@ -26,7 +26,7 @@ function Payment() {
         const getClientSecreat = async () =>{
             const response = await axios({
                 method:'post',
-                 url: `http://127.0.0.1:5001/fir-cc88d/us-central1/api/payments/create?total=${getBasketTotal(basket) * 100}`
+                 url: `/payments/create?total=${getBasketTotal(basket) * 100}`
             })
             setClientSecret(response.data.clientSecret)
             console.log("hii",getBasketTotal(basket))
